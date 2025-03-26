@@ -16,6 +16,8 @@ public class WebSocketSessionHolder {
     }
 
     public static void removeSession(WebSocketSession session) {
-        sessions.remove(session);
+        if(sessions.contains(session)) {
+            sessions.remove(session);
+        }
     }
 }
